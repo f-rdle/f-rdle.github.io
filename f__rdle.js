@@ -42,7 +42,7 @@ function visa_meddelande(text, ta_bort_efter_ms = 5000) {
 
 function gissa() {
 	if (nuvarande_kolumn != 5) {
-		visa_meddelande("Skriv helt ord")
+		visa_meddelande("Write a whole word")
 		return
 	}
 
@@ -53,7 +53,7 @@ function gissa() {
 	}
 
 	if (!ordlista.includes(gissning)) {
-		visa_meddelande(`'${gissning}' finns inte i ordlistan`)
+		visa_meddelande(`The wordlist does not contain '${gissning}'`)
 		return
 	}
 
@@ -76,12 +76,12 @@ function gissa() {
 	}
 
 	if (gissning == hemligt_ord) {
-		visa_meddelande("Hurra, det va rätt!", 0)
+		visa_meddelande("Congratulations correct!", 0)
 	} else {
 		nuvarande_rad++
 		nuvarande_kolumn = 0
 		if (nuvarande_rad == rutnät.length)
-			visa_meddelande(`Åh, nej. Du hittade inte ordet: ${hemligt_ord}`, 0)
+			visa_meddelande(`Oh no, you failed to find: ${hemligt_ord}`, 0)
 	}
 }
 
@@ -114,7 +114,7 @@ function tryck_tangent(tangent) {
 }
 
 function starta() {
-	console.log("Spelet startar...")
+	console.log("Starting the game...")
 
 
 	const kontainerelement = document.querySelector(".kontainer")
