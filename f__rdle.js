@@ -140,7 +140,7 @@ function starta() {
 		const tangentbordsradelement = skapa_div(tangentbordselement, "tangentbordsrad")
 
 		if (r == tangentbords_layout[2]) {
-			const enter = skapa_div(tangentbordsradelement, "bred-tangent", "gissa")
+			const enter = skapa_div(tangentbordsradelement, "bred-tangent", "guess")
 			enter.onclick = () => tryck_tangent("Enter")
 		}
 
@@ -157,7 +157,7 @@ function starta() {
 		}
 
 		if (r == tangentbords_layout[2]) {
-			const suddtangent = skapa_div(tangentbordsradelement, "bred-tangent", "sudda")
+			const suddtangent = skapa_div(tangentbordsradelement, "bred-tangent", "erase")
 			suddtangent.onclick = () => tryck_tangent("Backspace")
 		}
 	}
